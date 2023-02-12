@@ -19,5 +19,11 @@
       </mat-button-toggle-group>
     </div>
   </div>
+
+    <ul *ngFor="let d of data">
+      <li>{{d.id}}</li>
+      <li>{{d.title}}</li>
+      <li>{{d.body}}</li>
+    </ul>
 </body>
 </html>
