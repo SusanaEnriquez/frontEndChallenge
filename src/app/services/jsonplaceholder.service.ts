@@ -2,15 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { FormGroup, FormControl } from '@angular/forms';
-import { HomeComponent } from '../home/home.component';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JSONPlaceholderService {
 
-  post = this.fromHome.sendData;
-  constructor(private http: HttpClient, public fromHome: HomeComponent) { }
+  constructor(private http: HttpClient) { }
 
   getData():Observable<any>{
     const url = "https://jsonplaceholder.typicode.com/posts"
@@ -38,10 +36,4 @@ export class JSONPlaceholderService {
       category: "",
       bg: "https://source.unsplash.com/random"
     });
-  }
-
-  addPost(info: Array<any>){
-    // this.post.unshift(info);
-    // Se termino el tiempo
-  }
-}
+  }}

@@ -14,7 +14,6 @@ export class CreateComponent implements OnInit {
   }
 
   onSubmit(){
-    this.JSONPlacheholder.addPost(this.JSONPlacheholder.form.value);
-    this.JSONPlacheholder.form.reset();
+   
   }
 }
