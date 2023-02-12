@@ -20,9 +20,13 @@ export class HomeComponent implements OnInit{
 
   getDataFromAPI(){
     this.JSONPlacheholder.getData().subscribe((data) => {
-      this.data = data;
-      
-    })
+      data.forEach( function( d:any ){
+      d.bg = 'https://source.unsplash.com/random/' + Math.floor(Math.random() * 100000000) + 0;
+      let category = ['TRAVEL', 'LIFESTYLE', 'BUSINESS', 'FOOD', 'WORK'];
+      d.category = category[Math.floor(Math.random() * 4) + 0];
+      });
+    this.data = data;
+    })   
   }
 
 }

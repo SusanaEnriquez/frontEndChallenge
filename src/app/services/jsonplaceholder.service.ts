@@ -13,4 +13,9 @@ export class JSONPlaceholderService {
     const url = "https://jsonplaceholder.typicode.com/posts"
     return this.http.get<any>(url)
   }
+
+  getComments():Observable<any>{
+    const url = "https://jsonplaceholder.typicode.com/comments"
+    return this.http.get<any>(url)
+  }
 }

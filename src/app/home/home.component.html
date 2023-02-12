@@ -20,10 +20,23 @@
     </div>
   </div>
 
-    <ul *ngFor="let d of data">
-      <li>{{d.id}}</li>
-      <li>{{d.title}}</li>
-      <li>{{d.body}}</li>
-    </ul>
+  <div class="cards_container">
+    <div *ngFor="let d of data, index as i" class="cards">
+        <mat-card  class="card" style="background-image: url({{d.bg}});">
+            
+          <div class="content">
+              <mat-card-title class="card-title">{{d.title}}</mat-card-title>
+              <mat-card-subtitle class="card-subtitle">Comments <mat-icon style="font-size: 15px;">forum</mat-icon></mat-card-subtitle>
+
+              <mat-card-content>
+                <p class="body">{{d.body}}</p>
+                <p class="category">{{d.category}}</p>
+              </mat-card-content>
+          </div>
+
+        </mat-card>
+
+    </div>
+  </div>
 </body>
 </html>
