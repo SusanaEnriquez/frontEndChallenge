@@ -9,19 +9,19 @@
 <body>
   <div class="filters">
     <div style="overflow:scroll;">
-      <mat-button-toggle-group role="group" name="category" class="mat-button-toggle-group mat-button-toggle-group-appearance-standard" aria-disabled="false" #toggleGroup="matButtonToggleGroup" value = 'All'>
+      <mat-button-toggle-group role="group" name="category" class="mat-button-toggle-group mat-button-toggle-group-appearance-standard" aria-disabled="false" #toggleGroup="matButtonToggleGroup" value = 'All' [(ngModel)]="filter" name="filter">
         <mat-button-toggle class="filters-button" value="All" >All</mat-button-toggle>
-        <mat-button-toggle class="filters-button" value="Travel">Travel</mat-button-toggle>
-        <mat-button-toggle class="filters-button" value="Lifestyle">Lifestyle</mat-button-toggle>
-        <mat-button-toggle class="filters-button" value="Business">Business</mat-button-toggle>
-        <mat-button-toggle class="filters-button" value="Vacation">Food</mat-button-toggle>
-        <mat-button-toggle class="filters-button" value="Other">Work</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="TRAVEL">Travel</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="LIFESTYLE">Lifestyle</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="BUSINESS">Business</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="FOOD">Food</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="WORK">Work</mat-button-toggle>
       </mat-button-toggle-group>
     </div>
   </div>
 
   <div class="cards_container">
-    <div *ngFor="let d of data, index as i" class="cards">
+    <div *ngFor="let d of data | filter:filter, index as i" class="cards">
         <mat-card  class="card" style="background-image: url({{d.bg}});">
             
           <div class="content">
