@@ -42,5 +42,6 @@ export class JSONPlaceholderService {
 
   addPost(info: Array<any>){
     // this.post.unshift(info);
+    // Se termino el tiempo
   }
 }
