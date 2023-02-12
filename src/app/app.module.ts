@@ -11,12 +11,21 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { FilterPipe } from './pipe/filter.pipe';
 import { FormsModule } from '@angular/forms'
+import { MatButtonModule } from '@angular/material/button';
+import { CreateComponent } from './create/create.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FilterPipe
+    FilterPipe,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +35,13 @@ import { FormsModule } from '@angular/forms'
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

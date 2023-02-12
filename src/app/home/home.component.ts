@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { JSONPlaceholderService } from '../services/jsonplaceholder.service';
+import { CreateComponent } from '../create/create.component';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
 
 
 @Component({
@@ -12,7 +15,8 @@ export class HomeComponent implements OnInit{
   data: Array<any>;
   filter: string = "All";
 
-  constructor(private JSONPlacheholder:JSONPlaceholderService){
+
+  constructor(private JSONPlacheholder:JSONPlaceholderService, public dialog: MatDialog){
     this.data = new Array<any>()
    }
    
@@ -36,4 +40,16 @@ export class HomeComponent implements OnInit{
     })   
   }
 
+  onCreate(){
+    const dConfig = new MatDialogConfig();
+    dConfig.disableClose = true;
+    dConfig.autoFocus = true;
+    dConfig.width = "550px";
+    dConfig.maxWidth = "80vw";
+    this.dialog.open(CreateComponent, dConfig);    
+  }
+
+  sendData(){
+    return this.data;
+  }
 }

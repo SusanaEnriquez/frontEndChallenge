@@ -20,6 +20,10 @@
     </div>
   </div>
 
+  <button mat-fab  aria-label="Example icon button with a home icon" (click)="onCreate()" class="createButton">
+    <mat-icon>edit</mat-icon>
+  </button>
+
   <div class="cards_container">
     <div *ngFor="let d of data | filter:filter, index as i" class="cards">
         <mat-card  class="card" style="background-image: url({{d.bg}});">

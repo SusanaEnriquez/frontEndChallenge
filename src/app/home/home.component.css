@@ -109,6 +109,16 @@ body{
     transition: all .5s;
 }
 
+.createButton {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 9rem;
+    right: 20px;
+    z-index: 1;
+    background-color: var(--orange);
+}
+
 @media only screen and (max-width: 600px) {
     .cards{
         width: 100%;
