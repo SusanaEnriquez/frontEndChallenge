@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.filters{
+    text-align: center;
+    margin: 10px 0 20px;
+    position: relative;
+    border-radius: 25%;
+}
+
+.filters-button{
+    min-width: 90px;
+    font-size: 1rem;
+}

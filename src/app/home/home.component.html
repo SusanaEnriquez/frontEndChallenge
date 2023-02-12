@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <div class="filters">
+    <div style="overflow:scroll;">
+      <mat-button-toggle-group role="group" name="category" class="mat-button-toggle-group mat-button-toggle-group-appearance-standard" aria-disabled="false" #toggleGroup="matButtonToggleGroup" value = 'All'>
+        <mat-button-toggle class="filters-button" value="All" >All</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="Travel">Travel</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="Lifestyle">Lifestyle</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="Business">Business</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="Vacation">Food</mat-button-toggle>
+        <mat-button-toggle class="filters-button" value="Other">Work</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
+</body>
+</html>
